@@ -1,8 +1,21 @@
 import React from 'react';
 import {Main} from '../main/main.jsx';
+import PropTypes from "prop-types";
 
 export const App = (props) => {
-  // eslint-disable-next-line react/prop-types
-  const {poster, name, genre, releaseDate} = props;
-  return <Main poster={poster} name={name} genre={genre} releaseDate={releaseDate} />;
+  const {poster, name, genre, releaseDate, filmNames} = props;
+  return <Main
+    poster={poster}
+    name={name}
+    genre={genre}
+    releaseDate={releaseDate}
+    filmNames={filmNames} />;
+};
+
+App.propTypes = {
+  poster: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  genre: PropTypes.string.isRequired,
+  releaseDate: PropTypes.number.isRequired,
+  filmNames: PropTypes.array.isRequired
 };
