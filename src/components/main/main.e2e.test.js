@@ -37,7 +37,7 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should play button be pressed`, () => {
+it(`Should film card title be pressed`, () => {
   const linkClickHandler = jest.fn();
 
   const main = shallow(
@@ -47,13 +47,11 @@ it(`Should play button be pressed`, () => {
         genre={mainFilm.genre}
         releaseDate={mainFilm.releaseDate}
         filmNames={filmNames}
-        linkClickHandler={() => {}}
+        linkClickHandler={linkClickHandler}
       />
   );
 
-  const cardLink = main.find(`.small-movie-card__link`);
-  cardLink.forEach((element) => {
-    element.props().onClick();
-  });
-  expect(linkClickHandler.mock.calls.length);
+  const cardLink = main.find(`.small-movie-card__link`).first();
+  cardLink.simulate(`click`);
+  expect(linkClickHandler.mock.calls.length).toBe(1);
 });

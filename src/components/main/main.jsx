@@ -130,5 +130,5 @@ Main.propTypes = {
   genre: PropTypes.string.isRequired,
   releaseDate: PropTypes.number.isRequired,
   filmNames: PropTypes.array.isRequired,
-  linkClickHandler: PropTypes.func.isRequired,
+  linkClickHandler: PropTypes.func,
 };
