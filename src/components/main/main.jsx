@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from "prop-types";
 
 export const Main = (props) => {
-  const {poster, name, genre, releaseDate, filmNames} = props;
+  const {poster, name, genre, releaseDate, filmNames, linkClickHandler} = props;
 
-  const filmCard = filmNames.map((filmName) => {
-    return <article key={filmNames} className="small-movie-card catalog__movies-card">
+  const filmCard = filmNames.map((filmName, i) => {
+    return <article key={i} className="small-movie-card catalog__movies-card">
       <div className="small-movie-card__image">
         <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width={280} height={175} />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html">{filmName}</a>
+        <a className="small-movie-card__link" onClick={linkClickHandler} href="movie-page.html">{filmName}</a>
       </h3>
     </article>;
   });
@@ -129,5 +129,6 @@ Main.propTypes = {
   name: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   releaseDate: PropTypes.number.isRequired,
-  filmNames: PropTypes.array.isRequired
+  filmNames: PropTypes.array.isRequired,
+  linkClickHandler: PropTypes.func,
 };

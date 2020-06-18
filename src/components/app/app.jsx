@@ -9,7 +9,9 @@ export const App = (props) => {
     name={name}
     genre={genre}
     releaseDate={releaseDate}
-    filmNames={filmNames} />;
+    filmNames={filmNames}
+    linkClickHandler={() => {}}
+  />;
 };
 
 App.propTypes = {
@@ -17,5 +19,6 @@ App.propTypes = {
   name: PropTypes.string.isRequired,
   genre: PropTypes.string.isRequired,
   releaseDate: PropTypes.number.isRequired,
-  filmNames: PropTypes.array.isRequired
+  filmNames: PropTypes.array.isRequired,
+  linkClickHandler: PropTypes.func.isRequired,
 };
