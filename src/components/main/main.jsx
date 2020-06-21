@@ -1,19 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import {CardsList} from '../cards-list/cards-list.jsx';
 
 export const Main = (props) => {
-  const {poster, name, genre, releaseDate, filmNames, linkClickHandler} = props;
-
-  const filmCard = filmNames.map((filmName, i) => {
-    return <article key={i} className="small-movie-card catalog__movies-card">
-      <div className="small-movie-card__image">
-        <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt="Fantastic Beasts: The Crimes of Grindelwald" width={280} height={175} />
-      </div>
-      <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" onClick={linkClickHandler} href="movie-page.html">{filmName}</a>
-      </h3>
-    </article>;
-  });
+  const {films} = props;
 
   return (
     <React.Fragment>
@@ -39,13 +29,13 @@ export const Main = (props) => {
         <div className="movie-card__wrap">
           <div className="movie-card__info">
             <div className="movie-card__poster">
-              <img src={poster} alt="The Grand Budapest Hotel poster" width={218} height={327} />
+              <img src="img/bg-the-grand-budapest-hotel.jpg" alt="The Grand Budapest Hotel poster" width={218} height={327} />
             </div>
             <div className="movie-card__desc">
-              <h2 className="movie-card__title">{name}</h2>
+              <h2 className="movie-card__title">The Grand Budapest Hotel</h2>
               <p className="movie-card__meta">
-                <span className="movie-card__genre">{genre}</span>
-                <span className="movie-card__year">{releaseDate}</span>
+                <span className="movie-card__genre">Drama</span>
+                <span className="movie-card__year">2014</span>
               </p>
               <div className="movie-card__buttons">
                 <button className="btn btn--play movie-card__button" type="button">
@@ -100,9 +90,7 @@ export const Main = (props) => {
               <a href="#" className="catalog__genres-link">Thrillers</a>
             </li>
           </ul>
-          <div className="catalog__movies-list">
-            {filmCard}
-          </div>
+          <CardsList films={films}></CardsList>
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
           </div>
@@ -125,10 +113,5 @@ export const Main = (props) => {
 };
 
 Main.propTypes = {
-  poster: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  releaseDate: PropTypes.number.isRequired,
-  filmNames: PropTypes.array.isRequired,
-  linkClickHandler: PropTypes.func,
+  films: PropTypes.array
 };
