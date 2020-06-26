@@ -9,6 +9,7 @@ export const CardsList = (props) => {
       key={card.name}
       poster={card.poster}
       name={card.name}
+      url={card.url}
       linkClickHandler={linkClickHandler}
     />;
   });
@@ -18,6 +19,6 @@ export const CardsList = (props) => {
 };
 
 CardsList.propTypes = {
-  films: PropTypes.array,
+  films: PropTypes.array.isRequired,
   linkClickHandler: PropTypes.func,
 };
