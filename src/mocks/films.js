@@ -1,8 +1,4 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import {Main} from './main.jsx';
-
-const films = [
+export const films = [
   {
     poster: `img/the-grand-budapest-hotel-poster.jpg`,
     name: `The Grand Budapest Hotel`,
@@ -118,12 +114,3 @@ const films = [
     released: 2017
   },
 ];
-
-it(`<Main /> should  be rendered`, () => {
-  const tree = renderer
-    .create(<Main
-      films={films}
-    />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});

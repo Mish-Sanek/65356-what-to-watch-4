@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<App /> should render 20 film cards 1`] = `
+exports[`<App /> should be rendered cards 1`] = `
 Array [
   <section
     className="movie-card"
@@ -71,7 +71,7 @@ Array [
           <img
             alt="The Grand Budapest Hotel poster"
             height={327}
-            src="img/the-grand-budapest-hotel-poster.jpg"
+            src="img/bg-the-grand-budapest-hotel.jpg"
             width={218}
           />
         </div>
@@ -259,14 +259,15 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="The Grand Budapest Hotel"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/the-grand-budapest-hotel-poster.jpg"
               width={280}
             />
           </div>
@@ -278,20 +279,21 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Fantastic Beasts: The Crimes of Grindelwald
+              The Grand Budapest Hotel
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Bohemian Rhapsody"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/bohemian-rhapsody.jpg"
               width={280}
             />
           </div>
@@ -309,14 +311,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Macbeth"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/macbeth.jpg"
               width={280}
             />
           </div>
@@ -334,14 +337,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Aviator"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/aviator.jpg"
               width={280}
             />
           </div>
@@ -359,14 +363,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="We need to talk about Kevin"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/we-need-to-talk-about-kevin.jpg"
               width={280}
             />
           </div>
@@ -384,14 +389,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="What We Do in the Shadows"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/what-we-do-in-the-shadows.jpg"
               width={280}
             />
           </div>
@@ -409,14 +415,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Revenant"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/revenant.jpg"
               width={280}
             />
           </div>
@@ -434,14 +441,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Johnny English"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/johnny-english.jpg"
               width={280}
             />
           </div>
@@ -459,14 +467,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Shutter Island"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/shutter-island.jpg"
               width={280}
             />
           </div>
@@ -484,14 +493,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Pulp Fiction"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/pulp-fiction.jpg"
               width={280}
             />
           </div>
@@ -509,14 +519,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="No Country for Old Men"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/no-country-for-old-men.jpg"
               width={280}
             />
           </div>
@@ -534,14 +545,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Snatch"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/snatch.jpg"
               width={280}
             />
           </div>
@@ -559,14 +571,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Moonrise Kingdom"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/moonrise-kingdom.jpg"
               width={280}
             />
           </div>
@@ -584,14 +597,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Seven Years in Tibet"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/seven-years-in-tibet.jpg"
               width={280}
             />
           </div>
@@ -609,14 +623,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Midnight Special"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/midnight-special.jpg"
               width={280}
             />
           </div>
@@ -634,14 +649,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="War of the Worlds"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/war-of-the-worlds.jpg"
               width={280}
             />
           </div>
@@ -659,14 +675,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Darjeeling Limited"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/dardjeeling-limited.jpg"
               width={280}
             />
           </div>
@@ -678,20 +695,21 @@ Array [
               href="movie-page.html"
               onClick={[Function]}
             >
-              Dardjeeling Limited
+              Darjeeling Limited
             </a>
           </h3>
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Orlando"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/orlando.jpg"
               width={280}
             />
           </div>
@@ -709,14 +727,15 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onMouseOver={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
             <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+              alt="Mindhunter"
               height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              src="img/mindhunter.jpg"
               width={280}
             />
           </div>
@@ -729,31 +748,6 @@ Array [
               onClick={[Function]}
             >
               Mindhunter
-            </a>
-          </h3>
-        </article>
-        <article
-          className="small-movie-card catalog__movies-card"
-        >
-          <div
-            className="small-movie-card__image"
-          >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
-              height={175}
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
-              width={280}
-            />
-          </div>
-          <h3
-            className="small-movie-card__title"
-          >
-            <a
-              className="small-movie-card__link"
-              href="movie-page.html"
-              onClick={[Function]}
-            >
-              Midnight Special
             </a>
           </h3>
         </article>

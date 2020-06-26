@@ -1,6 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import {Main} from './main.jsx';
+import Enzyme, {mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import Card from '../card/card.jsx';
 
 const films = [
   {
@@ -119,11 +120,24 @@ const films = [
   },
 ];
 
-it(`<Main /> should  be rendered`, () => {
-  const tree = renderer
-    .create(<Main
-      films={films}
-    />)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+
+Enzyme.configure({
+  adapter: new Adapter(),
+});
+
+it(`Should film card state change`, () => {
+  const linkClickHandler = jest.fn();
+  const hoverHandler = jest.fn();
+
+  const card = mount(
+      <Card
+        key={films[0].name}
+        poster={films[0].poster}
+        name={films[0].name}
+        linkClickHandler={linkClickHandler}
+        hoverHandler={hoverHandler}
+      />);
+
+  card.simulate(`mouseover`);
+  expect(hoverHandler.mock.calls.length);
 });
