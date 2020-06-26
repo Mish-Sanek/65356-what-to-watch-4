@@ -1,19 +1,24 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-export default class Card extends React.Component {
+export default class Card extends React.PureComponent {
   constructor(props) {
     super(props);
     this._poster = this.props.poster;
     this._name = this.props.name;
     this._linkClickHandler = this.props.linkClickHandler;
     this.state = {
-      activeCard: false,
+      activeFilmName: ``,
     };
   }
 
   render() {
-    return <article className="small-movie-card catalog__movies-card" onMouseOver={() => !this.state}>
+    return <article
+      className="small-movie-card catalog__movies-card"
+      onMouseOver={() => {
+        this.setState({activeFilmName: this.props.name});
+      }}
+    >
       <div className="small-movie-card__image">
         <img src={this._poster} alt={this._name} width={280} height={175} />
       </div>
