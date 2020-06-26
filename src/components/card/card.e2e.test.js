@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import Enzyme, {mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Card from '../card/card.jsx';
 
@@ -129,7 +129,7 @@ it(`Should film card state change`, () => {
   const linkClickHandler = jest.fn();
   const hoverHandler = jest.fn();
 
-  const card = shallow(
+  const card = mount(
       <Card
         key={films[0].name}
         poster={films[0].poster}
