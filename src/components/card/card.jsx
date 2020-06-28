@@ -1,29 +1,45 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import Video from '../video/video.jsx';
 
 export default class Card extends React.PureComponent {
   constructor(props) {
     super(props);
-    this._poster = this.props.poster;
-    this._name = this.props.name;
-    this._linkClickHandler = this.props.linkClickHandler;
     this.state = {
-      activeFilmName: ``,
+      videoPlayState: false,
     };
   }
 
+  onMouseEnter() {
+    this.timeout = setTimeout(() => {
+      this.setState({videoPlayState: true});
+    }, 1000);
+  }
+
+  onMouseLeave() {
+    clearTimeout(this.timeout);
+    this.setState({videoPlayState: false});
+  }
+
   render() {
+    const {name, poster, url} = this.props;
+    const {videoPlayState} = this.state;
+
     return <article
       className="small-movie-card catalog__movies-card"
-      onMouseOver={() => {
-        this.setState({activeFilmName: this.props.name});
-      }}
+      onMouseEnter={() => this.onMouseEnter()}
+      onMouseLeave={() => this.onMouseLeave()}
     >
       <div className="small-movie-card__image">
-        <img src={this._poster} alt={this._name} width={280} height={175} />
+        <Video
+          ref={this.videoRef}
+          preview={poster}
+          url={url}
+          isPlay={videoPlayState}
+        />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" onClick={this._linkClickHandler} href="movie-page.html">{this._name}</a>
+        <a className="small-movie-card__link" onClick={this._linkClickHandler} href="movie-page.html">{name}</a>
       </h3>
     </article>;
   }
@@ -31,6 +47,7 @@ export default class Card extends React.PureComponent {
 
 Card.propTypes = {
   poster: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   linkClickHandler: PropTypes.func,
 };
