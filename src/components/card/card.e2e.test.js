@@ -263,7 +263,7 @@ describe(`Card events`, () => {
         </Router>
     );
     const cardLink = card.find(`a.small-movie-card__link`);
-    cardLink.simulate(`click`);
-    expect(linkClickHandler.mock.calls.length).toBe(1);
+    cardLink.simulate(`click`, {preventDefault() {}});
+    expect(linkClickHandler).toHaveBeenCalledTimes(1);
   });
 });
