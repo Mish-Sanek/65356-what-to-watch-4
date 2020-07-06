@@ -71,7 +71,7 @@ Array [
           <img
             alt="The Grand Budapest Hotel poster"
             height={327}
-            src="img/bg-the-grand-budapest-hotel.jpg"
+            src="img/the-grand-budapest-hotel-poster.jpg"
             width={218}
           />
         </div>
@@ -259,6 +259,7 @@ Array [
       >
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -269,6 +270,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/the-grand-budapest-hotel-poster.jpg"
+              src="https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4"
             />
           </div>
           <h3
@@ -276,7 +278,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               The Grand Budapest Hotel
             </a>
@@ -284,6 +287,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -294,6 +298,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/bohemian-rhapsody.jpg"
+              src=""
             />
           </div>
           <h3
@@ -301,7 +306,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Bohemian Rhapsody
             </a>
@@ -309,6 +315,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -319,6 +326,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/macbeth.jpg"
+              src=""
             />
           </div>
           <h3
@@ -326,7 +334,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Macbeth
             </a>
@@ -334,6 +343,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -344,6 +354,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/aviator.jpg"
+              src=""
             />
           </div>
           <h3
@@ -351,7 +362,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Aviator
             </a>
@@ -359,6 +371,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -369,6 +382,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/we-need-to-talk-about-kevin.jpg"
+              src=""
             />
           </div>
           <h3
@@ -376,7 +390,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               We need to talk about Kevin
             </a>
@@ -384,6 +399,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -394,6 +410,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/what-we-do-in-the-shadows.jpg"
+              src=""
             />
           </div>
           <h3
@@ -401,7 +418,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               What We Do in the Shadows
             </a>
@@ -409,6 +427,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -419,6 +438,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/revenant.jpg"
+              src=""
             />
           </div>
           <h3
@@ -426,7 +446,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Revenant
             </a>
@@ -434,6 +455,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -444,6 +466,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/johnny-english.jpg"
+              src=""
             />
           </div>
           <h3
@@ -451,7 +474,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Johnny English
             </a>
@@ -459,6 +483,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -469,6 +494,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/shutter-island.jpg"
+              src=""
             />
           </div>
           <h3
@@ -476,7 +502,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Shutter Island
             </a>
@@ -484,6 +511,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -494,6 +522,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/pulp-fiction.jpg"
+              src=""
             />
           </div>
           <h3
@@ -501,7 +530,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Pulp Fiction
             </a>
@@ -509,6 +539,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -519,6 +550,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/no-country-for-old-men.jpg"
+              src=""
             />
           </div>
           <h3
@@ -526,7 +558,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               No Country for Old Men
             </a>
@@ -534,6 +567,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -544,6 +578,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/snatch.jpg"
+              src=""
             />
           </div>
           <h3
@@ -551,7 +586,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Snatch
             </a>
@@ -559,6 +595,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -569,6 +606,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/moonrise-kingdom.jpg"
+              src=""
             />
           </div>
           <h3
@@ -576,7 +614,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Moonrise Kingdom
             </a>
@@ -584,6 +623,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -594,6 +634,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/seven-years-in-tibet.jpg"
+              src=""
             />
           </div>
           <h3
@@ -601,7 +642,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Seven Years in Tibet
             </a>
@@ -609,6 +651,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -619,6 +662,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/midnight-special.jpg"
+              src=""
             />
           </div>
           <h3
@@ -626,7 +670,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Midnight Special
             </a>
@@ -634,6 +679,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -644,6 +690,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/war-of-the-worlds.jpg"
+              src=""
             />
           </div>
           <h3
@@ -651,7 +698,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               War of the Worlds
             </a>
@@ -659,6 +707,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -669,6 +718,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/dardjeeling-limited.jpg"
+              src=""
             />
           </div>
           <h3
@@ -676,7 +726,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Darjeeling Limited
             </a>
@@ -684,6 +735,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -694,6 +746,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/orlando.jpg"
+              src=""
             />
           </div>
           <h3
@@ -701,7 +754,8 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Orlando
             </a>
@@ -709,6 +763,7 @@ Array [
         </article>
         <article
           className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
         >
@@ -719,6 +774,7 @@ Array [
               className="player__video"
               muted={true}
               poster="img/mindhunter.jpg"
+              src=""
             />
           </div>
           <h3
@@ -726,9 +782,38 @@ Array [
           >
             <a
               className="small-movie-card__link"
-              href="movie-page.html"
+              href="/movie-page"
+              onClick={[Function]}
             >
               Mindhunter
+            </a>
+          </h3>
+        </article>
+        <article
+          className="small-movie-card catalog__movies-card"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <div
+            className="small-movie-card__image"
+          >
+            <video
+              className="player__video"
+              muted={true}
+              poster="img/moonrise-kingdom.jpg"
+              src=""
+            />
+          </div>
+          <h3
+            className="small-movie-card__title"
+          >
+            <a
+              className="small-movie-card__link"
+              href="/movie-page"
+              onClick={[Function]}
+            >
+              Moonrise Kingdom
             </a>
           </h3>
         </article>

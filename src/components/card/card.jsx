@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import {Link} from 'react-router-dom';
 import Video from '../video/video.jsx';
 
-export default class Card extends React.PureComponent {
+class Card extends React.PureComponent {
   constructor(props) {
     super(props);
+    this._cardId = this.cardId;
     this.state = {
       videoPlayState: false,
+      cardId: 0
     };
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
   }
 
   onMouseEnter() {
@@ -22,12 +29,15 @@ export default class Card extends React.PureComponent {
   }
 
   render() {
-    const {name, poster, url} = this.props;
+    const {name, poster, url, id, updateId} = this.props;
     const {videoPlayState} = this.state;
 
     return <article
       className="small-movie-card catalog__movies-card"
-      onMouseEnter={() => this.onMouseEnter()}
+      onClick={() => {
+        updateId(id);
+      }}
+      onMouseEnter={() => this.onMouseEnter(id)}
       onMouseLeave={() => this.onMouseLeave()}
     >
       <div className="small-movie-card__image">
@@ -39,15 +49,19 @@ export default class Card extends React.PureComponent {
         />
       </div>
       <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" onClick={this._linkClickHandler} href="movie-page.html">{name}</a>
+        <Link className="small-movie-card__link" to="/movie-page">{name}</Link>
       </h3>
     </article>;
   }
 }
 
 Card.propTypes = {
+  id: PropTypes.number.isRequired,
   poster: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   linkClickHandler: PropTypes.func,
+  updateId: PropTypes.func.isRequired,
 };
+
+export default Card;
