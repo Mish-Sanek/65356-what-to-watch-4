@@ -29,7 +29,7 @@ class Card extends React.PureComponent {
   }
 
   render() {
-    const {name, poster, url, id, updateId} = this.props;
+    const {name, poster, url, id, updateId, linkClickHandler} = this.props;
     const {videoPlayState} = this.state;
 
     return <article
@@ -49,7 +49,7 @@ class Card extends React.PureComponent {
         />
       </div>
       <h3 className="small-movie-card__title">
-        <Link className="small-movie-card__link" to="/movie-page">{name}</Link>
+        <Link onClick={linkClickHandler} className="small-movie-card__link" to="/movie-page">{name}</Link>
       </h3>
     </article>;
   }

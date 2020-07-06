@@ -243,7 +243,6 @@ describe(`Card events`, () => {
     const linkClickHandler = jest.fn();
     const hoverHandler = jest.fn();
     const updateId = jest.fn();
-    const titleClickHandler = jest.fn();
     const history = createMemoryHistory();
     const route = `/movie-page`;
     history.push(route);
@@ -265,6 +264,6 @@ describe(`Card events`, () => {
     );
     const cardLink = card.find(`a.small-movie-card__link`);
     cardLink.simulate(`click`);
-    expect(titleClickHandler.mock.calls.length).toBe(1);
+    expect(linkClickHandler.mock.calls.length).toBe(1);
   });
 });
