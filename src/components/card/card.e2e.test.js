@@ -1,5 +1,7 @@
 import React from 'react';
-import Enzyme, {shallow} from 'enzyme';
+import {Router} from 'react-router-dom';
+import {createMemoryHistory} from 'history';
+import Enzyme, {shallow, mount} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Card from '../card/card.jsx';
 
@@ -14,7 +16,7 @@ const films = [
     preview: `https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Big_Buck_Bunny_Trailer_400p.ogv/Big_Buck_Bunny_Trailer_400p.ogv.360p.webm`,
     url: `https://download.blender.org/durian/trailer/sintel_trailer-480p.mp4`
   },
-  {
+  /* {
     id: 1,
     poster: `img/bohemian-rhapsody.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
@@ -203,7 +205,7 @@ const films = [
     released: 2012,
     preview: ``,
     url: ``
-  },
+  }, */
 ];
 
 
@@ -211,27 +213,58 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-it(`Should film card state change`, (done) => {
-  const linkClickHandler = jest.fn();
-  const hoverHandler = jest.fn();
-  const updateId = jest.fn();
+describe(`Card events`, () => {
+  it(`Should film card state change`, (done) => {
+    const linkClickHandler = jest.fn();
+    const hoverHandler = jest.fn();
+    const updateId = jest.fn();
 
-  const card = shallow(
-      <Card
-        id={films[0].id}
-        url={films[0].url}
-        key={films[0].name}
-        poster={films[0].poster}
-        background={films[0].background}
-        name={films[0].name}
-        updateId={updateId}
-        linkClickHandler={linkClickHandler}
-        hoverHandler={hoverHandler}
-      />);
+    const card = shallow(
+        <Card
+          id={films[0].id}
+          url={films[0].url}
+          key={films[0].name}
+          poster={films[0].poster}
+          background={films[0].background}
+          name={films[0].name}
+          updateId={updateId}
+          linkClickHandler={linkClickHandler}
+          hoverHandler={hoverHandler}
+        />);
 
-  card.simulate(`mouseenter`);
-  setTimeout(() => {
-    expect(card.state(`videoPlayState`)).toBe(true);
-    done();
-  }, 2000);
+    card.simulate(`mouseenter`);
+    setTimeout(() => {
+      expect(card.state(`videoPlayState`)).toBe(true);
+      done();
+    }, 2000);
+  });
+
+  it(`Card title should be clicked`, () => {
+    const linkClickHandler = jest.fn();
+    const hoverHandler = jest.fn();
+    const updateId = jest.fn();
+    const titleClickHandler = jest.fn();
+    const history = createMemoryHistory();
+    const route = `/movie-page`;
+    history.push(route);
+
+    const card = mount(
+        <Router history={history}>
+          <Card
+            id={films[0].id}
+            url={films[0].url}
+            key={films[0].name}
+            poster={films[0].poster}
+            background={films[0].background}
+            name={films[0].name}
+            updateId={updateId}
+            linkClickHandler={linkClickHandler}
+            hoverHandler={hoverHandler}
+          />);
+        </Router>
+    );
+    const cardLink = card.find(`a.small-movie-card__link`);
+    cardLink.simulate(`click`);
+    expect(titleClickHandler.mock.calls.length).toBe(1);
+  });
 });

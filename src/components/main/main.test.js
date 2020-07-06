@@ -1,4 +1,6 @@
 import React from 'react';
+import {Router} from 'react-router-dom';
+import {createMemoryHistory} from 'history';
 import renderer from 'react-test-renderer';
 import Main from './main.jsx';
 
@@ -205,12 +207,17 @@ const films = [
   },
 ];
 
-it(`<Main /> should  be rendered`, () => {
-  const tree = renderer
-    .create(<Main
-      films={films}
-      updateId={() => {}}
-    />)
-    .toJSON();
+it(`should render Main component`, () => {
+  const history = createMemoryHistory();
+  const route = `/movie-page`;
+  history.push(route);
+  const tree = renderer.create(
+      <Router history={history}>
+        <Main
+          films={films}
+          updateId={() => {}}
+        />
+      </Router>
+  ).toJSON();
   expect(tree).toMatchSnapshot();
 });
