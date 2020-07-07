@@ -1,7 +1,5 @@
 import React from 'react';
-import {Router} from 'react-router-dom';
-import {createMemoryHistory} from 'history';
-import Enzyme, {shallow, mount} from 'enzyme';
+import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Card from '../card/card.jsx';
 
@@ -237,33 +235,5 @@ describe(`Card events`, () => {
       expect(card.state(`videoPlayState`)).toBe(true);
       done();
     }, 2000);
-  });
-
-  it(`Card title should be clicked`, () => {
-    const linkClickHandler = jest.fn();
-    const hoverHandler = jest.fn();
-    const updateId = jest.fn();
-    const history = createMemoryHistory();
-    const route = `/movie-page`;
-    history.push(route);
-
-    const card = mount(
-        <Router history={history}>
-          <Card
-            id={films[0].id}
-            url={films[0].url}
-            key={films[0].name}
-            poster={films[0].poster}
-            background={films[0].background}
-            name={films[0].name}
-            updateId={updateId}
-            linkClickHandler={linkClickHandler}
-            hoverHandler={hoverHandler}
-          />);
-        </Router>
-    );
-    const cardLink = card.find(`a.small-movie-card__link`);
-    cardLink.simulate(`click`, {preventDefault() {}});
-    expect(linkClickHandler).toHaveBeenCalledTimes(1);
   });
 });
