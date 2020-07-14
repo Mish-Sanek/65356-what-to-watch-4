@@ -1,9 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {Provider} from 'react-redux';
 import PropTypes from "prop-types";
 import Main from '../main/main.jsx';
 import MoviePage from '../movie-page/movie-page.jsx';
+import {films} from '../../mocks/films.js';
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -19,31 +19,28 @@ class App extends React.PureComponent {
   }
 
   render() {
-    const {films, linkClickHandler, store} = this.props;
+    const {linkClickHandler} = this.props;
     const {cardId} = this.state;
 
-    return <Provider store={store}>
+    return (
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
             <Main
-              films={films}
               cardId={cardId}
               linkClickHandler={linkClickHandler}
               updateId={this.updateId}
             />
           </Route>
           <Route exact path="/movie-page">
-            <MoviePage film={films[this.state.cardId]} />
+            <MoviePage film={films[cardId]} />
           </Route>
         </Switch>
-      </BrowserRouter>
-    </Provider>;
+      </BrowserRouter>);
   }
 }
 
 App.propTypes = {
-  films: PropTypes.array,
   linkClickHandler: PropTypes.func,
   cardId: PropTypes.number,
   store: PropTypes.object,

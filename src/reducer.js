@@ -1,14 +1,17 @@
 const initialState = {
-  cardId: 0,
+  genre: `All genres`,
 };
 
-const ActionType =  {
-  CHANGE_CARD_ID: `Change card id`
+const ActionType = {
+  CHANGE_FILTER: `CHANGE_FILTER`
 };
 
 const ActionCreator = {
-  changeCardId: () => {
-
+  changeFilter: (genre) => {
+    return {
+      type: ActionType.CHANGE_FILTER,
+      payload: genre
+    };
   },
 };
 
@@ -16,8 +19,15 @@ const extend = (a, b) => {
   return Object.assign({}, a, b);
 };
 
-const reducer = (state = initialState) => {
-  extend(state, ActionCreator);
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ActionType.CHANGE_FILTER:
+      return extend(state, {
+        currentFilter: action.payload
+      });
+    default:
+      return state;
+  }
 };
 
-export {reducer, ActionType};
+export {reducer, ActionType, ActionCreator};
