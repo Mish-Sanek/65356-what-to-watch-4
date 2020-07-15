@@ -74,7 +74,7 @@ export const films = [
     poster: `img/bohemian-rhapsody.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Bohemian Rhapsody`,
-    genre: `Drama, Musical`,
+    genre: `Drama`,
     released: 2018,
     preview: ``,
     url: ``,
@@ -84,7 +84,7 @@ export const films = [
     poster: `img/macbeth.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Macbeth`,
-    genre: `Tragedy`,
+    genre: `Drama`,
     released: 2015,
     preview: ``,
     url: ``
@@ -94,7 +94,7 @@ export const films = [
     poster: `img/aviator.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Aviator`,
-    genre: `Drama, War`,
+    genre: `Drama`,
     released: 2015,
     preview: ``,
     url: ``
@@ -114,7 +114,7 @@ export const films = [
     poster: `img/what-we-do-in-the-shadows.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `What We Do in the Shadows`,
-    genre: `Pseudo-documentary`,
+    genre: `Documentary`,
     released: 2019,
     preview: ``,
     url: ``
@@ -124,7 +124,7 @@ export const films = [
     poster: `img/revenant.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Revenant`,
-    genre: `Western, Adventure`,
+    genre: `Crime`,
     released: 2016,
     preview: ``,
     url: ``
@@ -134,7 +134,7 @@ export const films = [
     poster: `img/johnny-english.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Johnny English`,
-    genre: `Comedy, Adventure, Spy`,
+    genre: `Comedy`,
     released: 2003,
     preview: ``,
     url: ``
@@ -144,7 +144,7 @@ export const films = [
     poster: `img/shutter-island.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Shutter Island`,
-    genre: `Thriller, Detective`,
+    genre: `Thriller`,
     released: 2010,
     preview: ``,
     url: ``
@@ -154,7 +154,7 @@ export const films = [
     poster: `img/pulp-fiction.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Pulp Fiction`,
-    genre: `Comedy, Criminal`,
+    genre: `Crime`,
     released: 1994,
     preview: ``,
     url: ``
@@ -164,7 +164,7 @@ export const films = [
     poster: `img/no-country-for-old-men.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `No Country for Old Men`,
-    genre: `Thriller, Criminal`,
+    genre: `Thriller`,
     released: 2008,
     preview: ``,
     url: ``
@@ -174,7 +174,7 @@ export const films = [
     poster: `img/snatch.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Snatch`,
-    genre: `Comedy, Heist`,
+    genre: `Comedy`,
     released: 2000,
     preview: ``,
     url: ``
@@ -184,7 +184,7 @@ export const films = [
     poster: `img/moonrise-kingdom.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Moonrise Kingdom`,
-    genre: `Romantic, Comedy`,
+    genre: `Romance`,
     released: 2012,
     preview: ``,
     url: ``
@@ -194,7 +194,7 @@ export const films = [
     poster: `img/seven-years-in-tibet.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Seven Years in Tibet`,
-    genre: `Drama, War`,
+    genre: `Drama`,
     released: 2012,
     preview: ``,
     url: ``
@@ -204,7 +204,7 @@ export const films = [
     poster: `img/midnight-special.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Midnight Special`,
-    genre: `Science-fiction, Thriller`,
+    genre: `Sci-FI`,
     released: 2016,
     preview: ``,
     url: ``
@@ -214,7 +214,7 @@ export const films = [
     poster: `img/war-of-the-worlds.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `War of the Worlds`,
-    genre: `Science-fiction, Thriller`,
+    genre: `Sci-FI`,
     released: 2016,
     preview: ``,
     url: ``
@@ -224,7 +224,7 @@ export const films = [
     poster: `img/dardjeeling-limited.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Darjeeling Limited`,
-    genre: `Comedy , Comedy-drama`,
+    genre: `Comedy`,
     released: 2007,
     preview: ``,
     url: ``
@@ -234,7 +234,7 @@ export const films = [
     poster: `img/orlando.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Orlando`,
-    genre: `Comedy , Comedy-drama`,
+    genre: `Comedy`,
     released: 2016,
     preview: ``,
     url: ``
@@ -244,7 +244,7 @@ export const films = [
     poster: `img/mindhunter.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Mindhunter`,
-    genre: `Criminal`,
+    genre: `Crime`,
     released: 2017,
     preview: ``,
     url: ``
@@ -254,9 +254,11 @@ export const films = [
     poster: `img/moonrise-kingdom.jpg`,
     background: `img/bg-the-grand-budapest-hotel.jpg`,
     name: `Moonrise Kingdom`,
-    genre: `Romantic, Comedy`,
+    genre: `Romance`,
     released: 2012,
     preview: ``,
     url: ``
   },
 ];
+
+

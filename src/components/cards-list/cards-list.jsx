@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from "prop-types";
 import Card from '../card/card.jsx';
+import {connect} from "react-redux";
 
-class CardsList extends React.PureComponent {
+class CardsListPresenter extends React.PureComponent {
   render() {
     const {films, linkClickHandler, updateId} = this.props;
     const cards = films.map((card) => {
@@ -23,11 +24,19 @@ class CardsList extends React.PureComponent {
   }
 }
 
-CardsList.propTypes = {
+CardsListPresenter.propTypes = {
   films: PropTypes.array.isRequired,
   linkClickHandler: PropTypes.func,
   getId: PropTypes.func,
   updateId: PropTypes.func.isRequired,
 };
+
+const mapStateToProps = (state, ownProps) => {
+  return Object.assign({}, ownProps, {
+    films: state.films.filter((film) => state.currentFilter === `All genres` || film.genre === state.currentFilter)
+  });
+};
+
+const CardsList = connect(mapStateToProps)(CardsListPresenter);
 
 export default CardsList;

@@ -1,5 +1,8 @@
 import React from 'react';
 import {Router} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import {reducer} from '../../reducer.js';
 import {createMemoryHistory} from 'history';
 import renderer from 'react-test-renderer';
 import Main from './main.jsx';
@@ -207,17 +210,23 @@ const films = [
   },
 ];
 
+const store = createStore(reducer, {
+  films
+});
+
 it(`should render Main component`, () => {
   const history = createMemoryHistory();
   const route = `/movie-page`;
   history.push(route);
   const tree = renderer.create(
-      <Router history={history}>
-        <Main
-          films={films}
-          updateId={() => {}}
-        />
-      </Router>
+      <Provider store={store}>
+        <Router history={history}>
+          <Main
+            films={films}
+            updateId={() => {}}
+          />
+        </Router>
+      </Provider>
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
