@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const withActiveFlag = (Component) => (props) => {
-  const [isActive, setActive] = React.useState(false);
+  const {isActive, setActive} = props;
 
   const handleActiveChange = () => setActive(!isActive);
 
