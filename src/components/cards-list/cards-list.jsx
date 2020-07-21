@@ -8,11 +8,11 @@ class CardsListPresenter extends React.PureComponent {
     const {films, linkClickHandler, updateId} = this.props;
     const cards = films.map((card) => {
       return <Card
+        name={card.name}
         key={card.id}
         id={card.id}
-        poster={card.poster}
-        name={card.name}
-        url={card.url}
+        poster={card.poster_image}
+        url={card.video_link}
         updateId={updateId}
         linkClickHandler={linkClickHandler}
       />;

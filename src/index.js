@@ -1,16 +1,25 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import {Provider} from 'react-redux';
-import {films} from './mocks/films.js';
-import {createStore} from 'redux';
-import {reducer} from './reducer.js';
+import {createStore, applyMiddleware, compose} from 'redux';
+import thunk from 'redux-thunk';
+import {createAPI} from './api.js';
+import {reducer, ActionCreator} from './reducer.js';
 import App from './components/app/app.jsx';
 
-const store = createStore(reducer, {
-  films,
-  currentFilter: `All genres`
+const api = createAPI(() => {
+  store.dispatch(ActionCreator.requireAuthorization());
 });
 
+const store = createStore(reducer, {
+  films: [],
+  currentFilter: `All genres`,
+}, compose(
+    applyMiddleware(thunk.withExtraArgument(api)),
+    window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f
+));
+
+store.dispatch(ActionCreator.getFilms());
 
 ReactDom.render(
     <Provider store={store}>
@@ -18,3 +27,4 @@ ReactDom.render(
     </Provider>,
     document.getElementById(`root`)
 );
+

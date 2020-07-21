@@ -3,7 +3,9 @@ const initialState = {
 };
 
 const ActionType = {
-  CHANGE_FILTER: `CHANGE_FILTER`
+  CHANGE_FILTER: `CHANGE_FILTER`,
+  AUTHORIZATION: `AUTHORIZATION`,
+  LOAD_FILM: `LOAD_FILM`
 };
 
 const ActionCreator = {
@@ -13,6 +15,27 @@ const ActionCreator = {
       payload: genre
     };
   },
+  requireAuthorization: () => {
+    return {
+      type: ActionType.AUTHORIZATION,
+    };
+  },
+  loadFilm: (films) => {
+    return {
+      type: ActionType.LOAD_FILM,
+      payload: films
+    };
+  },
+  getFilms: () => {
+    return (dispatch, getState, api) => {
+      api.get(`/films`).then(
+          (res) => {
+            console.log(res.data);
+            dispatch(ActionCreator.loadFilm(res.data));
+          }
+      );
+    };
+  }
 };
 
 const extend = (a, b) => {
@@ -24,6 +47,10 @@ const reducer = (state = initialState, action) => {
     case ActionType.CHANGE_FILTER:
       return extend(state, {
         currentFilter: action.payload
+      });
+    case ActionType.LOAD_FILM:
+      return extend(state, {
+        films: action.payload
       });
     default:
       return state;

@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from "prop-types";
 import Main from '../main/main.jsx';
 import MoviePage from '../movie-page/movie-page.jsx';
-import {films} from '../../mocks/films.js';
 
 class App extends React.PureComponent {
   constructor(props) {
@@ -33,7 +32,7 @@ class App extends React.PureComponent {
             />
           </Route>
           <Route exact path="/movie-page">
-            <MoviePage film={films[cardId]} />
+            <MoviePage />
           </Route>
         </Switch>
       </BrowserRouter>);
@@ -41,6 +40,7 @@ class App extends React.PureComponent {
 }
 
 App.propTypes = {
+  films: PropTypes.array,
   linkClickHandler: PropTypes.func,
   cardId: PropTypes.number,
   store: PropTypes.object,

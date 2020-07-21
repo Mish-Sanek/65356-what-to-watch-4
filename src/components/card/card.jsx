@@ -57,8 +57,8 @@ class Card extends React.PureComponent {
 
 Card.propTypes = {
   id: PropTypes.number.isRequired,
-  poster: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  poster: PropTypes.string,
+  url: PropTypes.string,
   name: PropTypes.string.isRequired,
   linkClickHandler: PropTypes.func,
   updateId: PropTypes.func.isRequired,
