@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import {connect} from 'react-redux';
 
-class MoviePage extends React.PureComponent {
+class MoviePagePresenter extends React.PureComponent {
   constructor(props) {
     super(props);
   }
@@ -143,8 +144,16 @@ class MoviePage extends React.PureComponent {
   }
 }
 
-MoviePage.propTypes = {
+MoviePagePresenter.propTypes = {
   film: PropTypes.object,
 };
+
+const mapStateToProps = (state, ownProps) => {
+  return Object.assign({}, ownProps, {
+    film: state.films.find((film) => film.id === Number(ownProps.id))
+  });
+};
+
+const MoviePage = connect(mapStateToProps)(MoviePagePresenter);
 
 export default MoviePage;

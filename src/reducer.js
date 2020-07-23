@@ -30,7 +30,6 @@ const ActionCreator = {
     return (dispatch, getState, api) => {
       api.get(`/films`).then(
           (res) => {
-            console.log(res.data);
             dispatch(ActionCreator.loadFilm(res.data));
           }
       );

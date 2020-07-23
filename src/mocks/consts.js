@@ -9,7 +9,7 @@ export const categories = [
   },
   {
     type: `Crime`,
-    name: `Criminal`,
+    name: `Crime`,
   },
   {
     type: `Documentary`,

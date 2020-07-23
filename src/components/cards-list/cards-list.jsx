@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 
 class CardsListPresenter extends React.PureComponent {
   render() {
-    const {films, linkClickHandler, updateId} = this.props;
+    const {films} = this.props;
     const cards = films.map((card) => {
       return <Card
         name={card.name}
@@ -13,8 +13,6 @@ class CardsListPresenter extends React.PureComponent {
         id={card.id}
         poster={card.poster_image}
         url={card.video_link}
-        updateId={updateId}
-        linkClickHandler={linkClickHandler}
       />;
     });
 
@@ -26,9 +24,6 @@ class CardsListPresenter extends React.PureComponent {
 
 CardsListPresenter.propTypes = {
   films: PropTypes.array.isRequired,
-  linkClickHandler: PropTypes.func,
-  getId: PropTypes.func,
-  updateId: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state, ownProps) => {

@@ -29,14 +29,11 @@ class Card extends React.PureComponent {
   }
 
   render() {
-    const {name, poster, url, id, updateId, linkClickHandler} = this.props;
+    const {name, poster, url, id} = this.props;
     const {videoPlayState} = this.state;
 
     return <article
       className="small-movie-card catalog__movies-card"
-      onClick={() => {
-        updateId(id);
-      }}
       onMouseEnter={() => this.onMouseEnter(id)}
       onMouseLeave={() => this.onMouseLeave()}
     >
@@ -49,7 +46,7 @@ class Card extends React.PureComponent {
         />
       </div>
       <h3 className="small-movie-card__title">
-        <Link onClick={linkClickHandler} className="small-movie-card__link" to="/movie-page">{name}</Link>
+        <Link className="small-movie-card__link" to={`/movie-page/${id}`}>{name}</Link>
       </h3>
     </article>;
   }
@@ -60,8 +57,6 @@ Card.propTypes = {
   poster: PropTypes.string,
   url: PropTypes.string,
   name: PropTypes.string.isRequired,
-  linkClickHandler: PropTypes.func,
-  updateId: PropTypes.func.isRequired,
 };
 
 export default Card;

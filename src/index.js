@@ -28,3 +28,4 @@ ReactDom.render(
     document.getElementById(`root`)
 );
 
+export {store};
